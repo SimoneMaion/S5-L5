@@ -1,0 +1,163 @@
+Delivered-To: simone94maion@gmail.com
+Received: by 2002:a05:7022:e1c:b0:89:f73d:8f6f with SMTP id dx28csp330597dlb;
+        Fri, 13 Sep 2024 02:53:42 -0700 (PDT)
+X-Received: by 2002:a17:907:980f:b0:a86:8d9d:898a with SMTP id a640c23a62f3a-a9029674d81mr532709766b.58.1726221221684;
+        Fri, 13 Sep 2024 02:53:41 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1726221221; cv=none;
+        d=google.com; s=arc-20160816;
+        b=I7/5rjqUC4FOiwRwkXpyUnaRGqfRMWC7eqr7VlElScnxvrz+b73id6/1cWhYmOPs3l
+         A5LM2Q8302pug6vdO+iIjZy5k1AukCpq3FLcGoiZaG63IvAyxtrUTK1ujMZYCD+843Y/
+         64s2FQWpe/w4ncaaoQORp6ctRHFtrZ7aszFqnyo99UKJLpfdqg9xNEcg7zHaf/rjvQgZ
+         iPMWEo7j58Hu+bd2MnVruv8UvH4W4cIg7ydD4+TFJhbB5V7rt185sclcGALhL0VxdXi6
+         Pm22SEBTwDbzLNxlnBlBTXQGiwLFVdJUPXDOCVMHL57MVsSUK4p1N2zGXOvNLRqDvJrH
+         PuYg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:from:date:mime-version:dkim-signature;
+        bh=qxnFhUzzNO0UsCWb1qWzEHrBfrvVGOJzlunGGuho8ts=;
+        fh=7wC3JAUTohILEWRBGxh0gqZT/qyAIoW0BXSQ+Q6vcug=;
+        b=LbKM2tnO9N+8qm6bOxN7Sa8ODznAK2VUjYpbO1kKRwbxiwdog2uQ18FjmvicZhDWK+
+         JZBeuX9W/9WEOgR7H8PR2ZYcYZD8uw2inqRbPqbJl57qV3oWwPZsM8bp2p5SkywNztWk
+         hJovs9CYjU2sIY+DzMjwKG0XBdw5JTLkzbAHgGZJWFBLILKQOBnUUwLZHePA8UgAnpAX
+         ZraGmBhx4l3YnjKQrxgDPBcqF5b8cVytzh3c2qrY+ht7qCVGXpvky+nRnewX5aY105Im
+         Tbi4kRcUS07VTWRIcZvuChLugarxY890pMVwDfJ4XzPgcEdM14NJiOQPM6SWIH+zrwxp
+         SOKA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=clXdyjYx;
+       spf=pass (google.com: domain of simone.maion94@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=simone.maion94@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <simone.maion94@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-a8d25c2ba7csor433885566b.14.2024.09.13.02.53.41
+        for <simone94maion@gmail.com>
+        (Google Transport Security);
+        Fri, 13 Sep 2024 02:53:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of simone.maion94@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=clXdyjYx;
+       spf=pass (google.com: domain of simone.maion94@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=simone.maion94@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1726221221; x=1726826021; dara=google.com;
+        h=to:subject:message-id:from:date:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=qxnFhUzzNO0UsCWb1qWzEHrBfrvVGOJzlunGGuho8ts=;
+        b=clXdyjYx0/f5KHihsBqtpEkQaByQ9hCQTleyYBWiSd89RzgEhr9TSy5VXMtGlKcl/K
+         kfTuXmSPc2E0qDeRZoEZJ15TvJjjmdvDqwWcerpBzHCz8q0pFIqjmLhUYECCDjQkNo5v
+         VB1NBVRtLFRxomzBkx5UXtnf0NXrt0VU54xJPAwP48cdABdXSUMd8L5jaCk0tT6lxYAS
+         n7Sxmxmki3/+Lo7mJWSv39qjY/wLiqe44QxxCSf3I2U+TacVMQ6v+ukwUqYiVOm4CwNH
+         ZazHrQYiDqbLCrfpdSBbm3nnZwqSLl2smoHMQkpLPJKzND5/jixCN5mf0O3qeB9ycivy
+         n2TA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1726221221; x=1726826021;
+        h=to:subject:message-id:from:date:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=qxnFhUzzNO0UsCWb1qWzEHrBfrvVGOJzlunGGuho8ts=;
+        b=lT6vD/ydNaZzqg/f2Fr5CWDxLxmAeCcHT/Ty+h6dQVyBMMXy6VaUPjPH2PUWgzs8WE
+         r1Ao8/3wthmOgZzCAKHU6S/ITmgaabXCu3JEe6SkSoYVWvaDyP2QEIa32MOb9jBum8Z+
+         AXxGmdT+NeTHpMJUBzMI1P+ddUbz5mdFlCQF0uGv/tnIKLf7z9SRjIf52E2zd6RsqHhB
+         jxD5CfvecAHHXzPQMfTdxrEb0/Mzz7vibz9zv94LJY3OACbXLGNorK2bVOrPsMXtLWwV
+         OdzbSVYATzrJ2HmzpNMzaes3VVyjfcZf7RKqexNhwLAOm0sRbV8cFUQlTnB7L89iVP/F
+         G3NQ==
+X-Gm-Message-State: AOJu0YwruzNl32Y0O3R0jpYwZI+mJQSpgCDqf0XRl/Px52oI5Lz1D2p7
+	Qvj6AmA5k99HXEsmiQtZat6m97opxQ+A5mEq6S7wjAb7FJGlwscTV0TfMg==
+X-Google-Smtp-Source: AGHT+IFruFQ5aehwjYX6oMUymZ/KTenmAPVrDkZzP8zWfZW0doJYhKJlO5yrUMPhnz61kpS34pVNeQ==
+X-Received: by 2002:a17:906:d7c9:b0:a86:9f56:21e6 with SMTP id a640c23a62f3a-a90294d093fmr509183666b.33.1726221220785;
+        Fri, 13 Sep 2024 02:53:40 -0700 (PDT)
+Return-Path: <simone.maion94@gmail.com>
+Received: from DESKTOP-CMC2K1F ([151.95.175.33])
+        by smtp.gmail.com with ESMTPSA id a640c23a62f3a-a8d25ced17asm863342866b.170.2024.09.13.02.53.40
+        for <simone94maion@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 13 Sep 2024 02:53:40 -0700 (PDT)
+Mime-Version: 1.0
+Date: Fri, 13 Sep 2024 11:53:40 +0200
+From: simone.maion94@gmail.com
+X-Mailer: gophish
+Message-Id: <1726221220733263300.19292.9107031562932702062@DESKTOP-CMC2K1F>
+Subject: Urgente: Verifica le tue transazioni sospette!
+To: "Sim Ma" <simone94maion@gmail.com>
+Content-Type: multipart/alternative;
+ boundary=2607c231687fe9f87b5f0b9677993d1db3ec050a5769fafafe64b5a8f076
+
+--2607c231687fe9f87b5f0b9677993d1db3ec050a5769fafafe64b5a8f076
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+Gentile Cliente,
+Abbiamo rilevato delle attivit=EF=BF=BD sospette nel tuo conto bancario nel=
+le ultime 24 ore. Per garantire la sicurezza del tuo conto, =EF=BF=BD neces=
+sario che tu acceda immediatamente al nostro sito per verificare queste tra=
+nsazioni.
+Per favore, clicca sul link sottostante e segui le istruzioni per confermar=
+e la tua identit=EF=BF=BD e proteggere il tuo conto:
+Verifica le tue transazioni<http://192.168.51.102>
+Ricorda, =EF=BF=BD molto importante che tu agisca subito per evitare qualsi=
+asi blocco del tuo conto o perdita di fondi. Non rispondere a questa email =
+e non fornire informazioni personali se non tramite il link fornito.
+Grazie per la tua collaborazione.
+Cordiali Saluti,
+Servizio Clienti Banca Finta
+Nota: Questo =EF=BF=BD un messaggio automatico. Ti preghiamo di non rispond=
+ere a questa email.
+
+--2607c231687fe9f87b5f0b9677993d1db3ec050a5769fafafe64b5a8f076
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<html>
+<head>
+	<title></title>
+	<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859=
+-1"/>
+	<style style=3D"display:none;" type=3D"text/css">P {margin-top:0;margin-bo=
+ttom:0;}
+	</style>
+</head>
+<body dir=3D"ltr">
+<div class=3D"elementToProof" style=3D"line-height: 1.284; margin: 0cm 0cm =
+8pt; font-family: Calibri, Helvetica, sans-serif; font-size: 12pt; color: r=
+gb(0, 0, 0);">Gentile Cliente,</div>
+
+<div style=3D"line-height: 1.284; margin: 0cm 0cm 8pt; font-family: Calibri=
+, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">Abbiamo ril=
+evato delle attivit&agrave;&nbsp;sospette nel tuo conto bancario nelle ulti=
+me 24 ore. Per garantire la sicurezza del tuo conto, &egrave;&nbsp;necessar=
+io che tu acceda immediatamente al nostro sito per verificare queste transa=
+zioni.</div>
+
+<div style=3D"line-height: 1.284; margin: 0cm 0cm 8pt; font-family: Calibri=
+, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">Per favore,=
+ clicca sul link sottostante e segui le istruzioni per confermare la tua id=
+entit&agrave;&nbsp;e proteggere il tuo conto:</div>
+
+<div style=3D"line-height: 1.284; margin: 0cm 0cm 8pt; font-family: Calibri=
+, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"><i><u><a cl=
+ass=3D"OWAAutoLink" href=3D"?rid=3DXWwOeyp" id=3D"LPlnk154113" title=3D"192=
+.168.51.102">Verifica le tue transazioni</a></u></i></div>
+
+<div style=3D"line-height: 1.284; margin: 0cm 0cm 8pt; font-family: Calibri=
+, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">Ricorda, &e=
+grave;&nbsp;molto importante che tu agisca subito per evitare qualsiasi blo=
+cco del tuo conto o perdita di fondi. Non rispondere a questa email e non f=
+ornire informazioni personali se non tramite il link fornito.</div>
+
+<div style=3D"line-height: 1.284; margin: 0cm 0cm 8pt; font-family: Calibri=
+, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">Grazie per =
+la tua collaborazione.</div>
+
+<div style=3D"line-height: 1.284; margin: 0cm 0cm 8pt; font-family: Calibri=
+, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">Cordiali Sa=
+luti,<br />
+Servizio Clienti Banca Finta</div>
+
+<div style=3D"line-height: 1.284; margin: 0cm 0cm 8pt; font-family: Calibri=
+, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"><i>Nota: Qu=
+esto &egrave;&nbsp;un messaggio automatico. Ti preghiamo di non rispondere =
+a questa email.</i></div>
+<img alt=3D'' style=3D'display: none' src=3D'/track?rid=3DXWwOeyp'/></body>
+</html>
+
+--2607c231687fe9f87b5f0b9677993d1db3ec050a5769fafafe64b5a8f076--
